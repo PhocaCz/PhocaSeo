@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            label="JSEARCH_FILTER_LABEL"
+            hint="JSEARCH_FILTER"
+            class="js-stools-search-string"
+        />
+        <field
+            name="published"
+            type="status"
+            label="JOPTION_SELECT_PUBLISHED"
+            description="JOPTION_SELECT_PUBLISHED_DESC"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+        <field
+            name="context"
+            type="list"
+            label="COM_PHOCASEO_FILTER_CONTEXT_LABEL"
+            description="COM_PHOCASEO_FILTER_CONTEXT_DESC"
+            default="com_content.article"
+            onchange="this.form.submit();"
+        >
+            <option value="com_content.article">COM_PHOCASEO_CONTEXT_ARTICLE</option>
+            <option value="com_content.category">COM_PHOCASEO_CONTEXT_CATEGORY</option>
+            <option value="com_menus.item">COM_PHOCASEO_CONTEXT_MENU_ITEM</option>
+            <option value="com_phocacart.product">COM_PHOCASEO_CONTEXT_PHOCACART_PRODUCT</option>
+        </field>
+
+        <field
+            name="seo_status"
+            type="list"
+            label="COM_PHOCASEO_FILTER_SEO_STATUS_LABEL"
+            description="COM_PHOCASEO_FILTER_SEO_STATUS_DESC"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_PHOCASEO_FILTER_SEO_STATUS_SELECT</option>
+            <option value="good">COM_PHOCASEO_SEO_STATUS_GOOD</option>
+            <option value="needs_improvement">COM_PHOCASEO_SEO_STATUS_NEEDS_IMPROVEMENT</option>
+            <option value="poor">COM_PHOCASEO_SEO_STATUS_POOR</option>
+            <option value="not_analyzed">COM_PHOCASEO_SEO_STATUS_NOT_ANALYZED</option>
+        </field>
+
+    </fields>
+    <fields name="list">
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            description="JGLOBAL_SORT_BY"
+            default="a.id DESC"
+            class="js-select-submit-on-change"
+            validate="options"
+        >
+            <option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+            <option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+            <option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+            <option value="seo_score ASC">COM_PHOCASEO_SEO_SCORE_ASC</option>
+            <option value="seo_score DESC">COM_PHOCASEO_SEO_SCORE_DESC</option>
+            <option value="a.state ASC">JSTATUS_ASC</option>
+            <option value="a.state DESC">JSTATUS_DESC</option>
+        </field>
+
+
+        <field
+            name="limit"
+            type="limitbox"
+            label="JGLOBAL_LIST_LIMIT"
+            description="JGLOBAL_LIST_LIMIT_DESC"
+            class="js-select-submit-on-change"
+            default="25"
+        />
+    </fields>
+</form>

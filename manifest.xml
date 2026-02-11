@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<updates>
+	<update>
+		<name><![CDATA[ Phoca Seo ]]></name>
+		<description><![CDATA[ Phoca SEO is a powerful, enterprise-grade component designed to transform Joomla websites into high-performing marketing assets. It provides a centralized ecosystem for managing all critical aspects of Search Engine Optimization and digital visibility. ]]></description>
+		<element>com_phocaseo</element>
+		<type>component</type>
+		<version>6.0.0Alpha14</version>
+		<infourl title="Phoca Seo 6.0.0Alpha14">http://www.phoca.cz/version/index.php?phocaseo=6.0.0Alpha14</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaSeo/releases/download/6.0.0Alpha14/com_phocaseo_v6.0.0Alpha14.zip</downloadurl>
+		</downloads>
+		<sha512>313f67bf26723ab3cb6a367d53f05235fd36b905e2f84fb86365db1a3fc2f4e3f208907bcb43cca8cf6b0a8ace619693c615cdb0f61ba1095884099ded06ab38</sha512>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer><![CDATA[ Phoca.cz ]]></maintainer>
+		<maintainerurl>https://www.phoca.cz/</maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="(5|6)\.*"/>
+		<client>administrator</client>
+	</update>
+</updates>

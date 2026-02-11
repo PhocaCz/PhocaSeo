@@ -1,0 +1,119 @@
+{
+  "language": "cs",
+  "language_name": "Czech",
+  "description": "Custom Czech language suffix patterns for keyword variations",
+  "version": "1.0.0",
+  "author": "Jan Pavelka",
+
+  "suffix_groups": [
+    {
+      "description": "Feminine nouns ending in -a (1st declension)",
+      "suffixes": [
+        "a", "y", "ě", "u", "ou", "o",
+        "ách", "ami", "ám"
+      ]
+    },
+    {
+      "description": "Neuter nouns ending in -o (2nd declension)",
+      "suffixes": [
+        "o", "a", "u", "em", "e",
+        "ech", "y", "ům", "ám"
+      ]
+    },
+    {
+      "description": "Masculine/neuter nouns ending in consonant",
+      "suffixes": [
+        "", "a", "u", "em", "e",
+        "ech", "y", "ům", "i"
+      ]
+    },
+    {
+      "description": "Adjectives - hard declension",
+      "suffixes": [
+        "ý", "á", "é", "í",
+        "ého", "é", "ým", "ou",
+        "ých", "ými", "ím"
+      ]
+    },
+    {
+      "description": "Adjectives - soft declension",
+      "suffixes": [
+        "í", "ího", "ímu", "ím", "í",
+        "ích", "ími"
+      ]
+    },
+    {
+      "description": "Common diminutives",
+      "suffixes": [
+        "ka", "ky", "ku", "ce", "ek",
+        "kou", "kách", "kami", "kám"
+      ]
+    },
+    {
+      "description": "Abstract nouns (-ost, -ení)",
+      "suffixes": [
+        "ost", "osti", "ostem", "ostech",
+        "ení", "ěním", "eních"
+      ]
+    },
+    {
+      "description": "Verbal nouns and participles",
+      "suffixes": [
+        "ní", "ním", "ních",
+        "ného", "ného"
+      ]
+    },
+    {
+      "description": "Comparative and superlative",
+      "suffixes": [
+        "ější", "ějšího", "ějším",
+        "ejší", "ejšího", "ejším"
+      ]
+    },
+    {
+      "description": "Nouns with moving -e- and diminutives (all genders)",
+      "suffixes": [
+        "ka", "ky", "ku", "ce", "ek", "ko", "kem",
+        "kou", "kách", "kami", "kám"
+      ]
+    },
+    {
+      "description": "Feminine nouns ending in -a (1st declension)",
+      "suffixes": [
+        "a", "y", "ě", "u", "ou", "o",
+        "ách", "ami", "ám"
+      ]
+    },
+    {
+      "description": "Neuter nouns ending in -o (2nd declension)",
+      "suffixes": [
+        "o", "a", "u", "em", "e",
+        "ech", "y", "ům", "ám"
+      ]
+    },
+    {
+      "description": "Masculine/neuter nouns ending in consonant",
+      "suffixes": [
+        "", "a", "u", "em", "e",
+        "ech", "y", "ům", "i"
+      ]
+    }
+  ],
+
+  "transition_words": ["také","kromě toho","v důsledku toho","nakonec","dále","tudíž","nicméně","opravdu","podobně","navíc","totiž","dále","nicméně","navzdory tomu","nyní","jinak","podobně","stále","poté","proto","tudíž","skutečně","nakonec","nepochybně","podle toho","v důsledku","z tohoto důvodu","jelikož","takže","navíc","dodatečně","nicméně","na druhou stranu"],
+    "passive_voice": ["jsem","je","jsou","byl","byli","být","byl","jsouc"],
+
+  "notes": [
+    "These patterns work for most common Czech words",
+    "For irregular words (člověk → lidé), AI strategy is recommended",
+    "Patterns are applied in order - first match wins",
+    "Minimum stem length is 3 characters to avoid over-stemming"
+  ],
+
+  "examples": {
+    "nabídka": ["nabídka", "nabídky", "nabídku", "nabídce", "nabídkou", "nabídkách", "nabídkami", "nabíd"],
+    "recept": ["recept", "receptu", "receptem", "recepty", "receptech", "receptům"],
+    "automobil": ["automobil", "automobilu", "automobilem", "automobily", "automobilech"],
+    "krásný": ["krásný", "krásná", "krásné", "krásného", "krásném", "krásnými"]
+  }
+}

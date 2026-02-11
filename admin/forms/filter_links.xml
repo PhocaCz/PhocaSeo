@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="JSEARCH_FILTER_LABEL"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string"
+		/>
+		<field
+			name="link_type"
+			type="list"
+			label="COM_PHOCASEO_FILTER_LINK_TYPE"
+			description="COM_PHOCASEO_FILTER_LINK_TYPE_DESC"
+			default="all"
+			onchange="this.form.submit();"
+		>
+			<option value="all">COM_PHOCASEO_ALL_LINKS</option>
+			<option value="broken">COM_PHOCASEO_BROKEN_LINKS</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			class="js-select-submit-on-change"
+			default="l.id DESC"
+			validate="options"
+		>
+			<option value="l.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="l.id DESC">JGRID_HEADING_ID_DESC</option>
+			<option value="l.target_url ASC">COM_PHOCASEO_TARGET_URL_ASC</option>
+			<option value="l.target_url DESC">COM_PHOCASEO_TARGET_URL_DESC</option>
+			<option value="l.status_code ASC">COM_PHOCASEO_STATUS_CODE_ASC</option>
+			<option value="l.status_code DESC">COM_PHOCASEO_STATUS_CODE_DESC</option>
+			<option value="l.status_checked ASC">COM_PHOCASEO_LAST_CHECKED_ASC</option>
+			<option value="l.status_checked DESC">COM_PHOCASEO_LAST_CHECKED_DESC</option>
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			label="JGLOBAL_LIST_LIMIT"
+			description="JGLOBAL_LIST_LIMIT_DESC"
+			class="js-select-submit-on-change"
+			default="20"
+		/>
+	</fields>
+</form>

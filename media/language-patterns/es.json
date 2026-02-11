@@ -1,0 +1,59 @@
+{
+  "language": "es",
+  "language_name": "Spanish",
+  "description": "Custom Spanish language suffix patterns for keyword variations",
+  "version": "1.0.0",
+  "author": "Jan Pavelka",
+
+  "suffix_groups": [
+    {
+      "description": "Noun and Adjective Plurals",
+      "suffixes": [
+        "s", "es"
+      ]
+    },
+    {
+      "description": "Gender Agreement (Masculine/Feminine)",
+      "suffixes": [
+        "o", "a", "os", "as"
+      ]
+    },
+    {
+      "description": "Common Verb Conjugations (AR/ER/IR)",
+      "suffixes": [
+        "o", "as", "a", "amos", "an", "es", "e", "emos", "en", "imos",
+        "ado", "ido", "ando", "iendo", "ará", "ará", "ería"
+      ]
+    },
+    {
+      "description": "Superlatives and Diminutives",
+      "suffixes": [
+        "ísimo", "ísima", "ísimos", "ísimas",
+        "ito", "ita", "itos", "itas", "illo", "illa"
+      ]
+    },
+    {
+      "description": "Adverb Formation",
+      "suffixes": [
+        "mente"
+      ]
+    }
+  ],
+
+  "transition_words":["también","además","en consecuencia","finalmente","además","por lo tanto","sin embargo","de hecho","igualmente","además","es decir","luego","no obstante","a pesar de ello","ahora","de lo contrario","de manera similar","todavía","entonces","por lo tanto","así","verdaderamente","en última instancia","sin duda","en consecuencia","como resultado","por esta razón","ya que","así que","adicionalmente","además","no obstante","por otro lado"],
+    "passive_voice":["soy","es","son","era","eran","ser","sido","siendo"],
+
+  "notes": [
+    "Spanish uses accents (á, é, í, ó, ú) which can change in pluralization (e.g., canción -> canciones)",
+    "Gender agreement is strict: 'receta rápida' vs 'plato rápido'",
+    "Verbs are highly inflected; a single root can have dozens of endings",
+    "Minimum stem length of 4 characters is recommended to avoid matching common pronouns or prepositions"
+  ],
+
+  "examples": {
+    "oferta": ["oferta", "ofertas", "ofertón", "ofertado"],
+    "receta": ["receta", "recetas", "recetilla"],
+    "rápido": ["rápido", "rápida", "rápidos", "rápidas", "rápidamente"],
+    "cocinar": ["cocinar", "cocino", "cocinas", "cocina", "cocinado", "cocinando"]
+  }
+}

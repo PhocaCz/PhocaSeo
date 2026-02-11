@@ -1,0 +1,48 @@
+{
+    "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+    "name": "com_phocaseo",
+    "version": "6.0.0",
+    "description": "Phoca SEO Assets",
+    "license": "GPL-2.0-or-later",
+    "assets": [
+        {
+            "name": "com_phocaseo.admin.dashboard",
+            "type": "style",
+            "uri": "com_phocaseo/admin/dashboard.css"
+        },
+        {
+            "name": "com_phocaseo.admin.item-edit",
+            "type": "style",
+            "uri": "com_phocaseo/admin/item-edit.css"
+        },
+        {
+            "name": "com_phocaseo.admin.item-edit",
+            "type": "script",
+            "uri": "com_phocaseo/admin/item-edit.js",
+            "dependencies": ["core"],
+            "attributes": {
+                "type": "module",
+                "defer": true
+            }
+        },
+        {
+            "name": "com_phocaseo.admin.items-inline",
+            "type": "script",
+            "uri": "com_phocaseo/admin/items-inline.js",
+            "dependencies": ["core"],
+            "attributes": {
+                "type": "module",
+                "defer": true
+            }
+        },
+        {
+            "name": "com_phocaseo.admin.links",
+            "type": "script",
+            "uri": "com_phocaseo/admin/links.js",
+            "dependencies": ["core"],
+            "attributes": {
+                "defer": true
+            }
+        }
+    ]
+}

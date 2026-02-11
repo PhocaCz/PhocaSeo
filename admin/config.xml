@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset
+        name="ai_settings"
+        label="COM_PHOCASEO_CONFIG_AI_SETTINGS_LABEL"
+        description="COM_PHOCASEO_CONFIG_AI_SETTINGS_DESC"
+    >
+        <field
+            name="ai_provider"
+            type="list"
+            label="COM_PHOCASEO_CONFIG_AI_PROVIDER_LABEL"
+            description="COM_PHOCASEO_CONFIG_AI_PROVIDER_DESC"
+            default="openai"
+            validate="options"
+        >
+            <option value="openai">OpenAI (GPT)</option>
+            <option value="gemini">Google Gemini</option>
+            <option value="claude">Anthropic Claude</option>
+            <option value="local">Local AI (Custom)</option>
+        </field>
+
+        <field
+            name="local_ai_url"
+            type="text"
+            label="COM_PHOCASEO_CONFIG_LOCAL_AI_URL_LABEL"
+            description="COM_PHOCASEO_CONFIG_LOCAL_AI_URL_DESC"
+            default="http://localhost:5000/v1"
+            filter="raw"
+            showon="ai_provider:local"
+        />
+
+        <field
+            name="local_ai_model"
+            type="text"
+            label="COM_PHOCASEO_CONFIG_LOCAL_AI_MODEL_LABEL"
+            description="COM_PHOCASEO_CONFIG_LOCAL_AI_MODEL_DESC"
+            default="llama3.2"
+            showon="ai_provider:local"
+        />
+
+        <field
+            name="openai_api_key"
+            type="text"
+            label="COM_PHOCASEO_CONFIG_OPENAI_KEY_LABEL"
+            description="COM_PHOCASEO_CONFIG_OPENAI_KEY_DESC"
+            filter="raw"
+            showon="ai_provider:openai"
+        />
+
+        <field
+            name="openai_model"
+            type="list"
+            label="COM_PHOCASEO_CONFIG_OPENAI_MODEL_LABEL"
+            default="gpt-4o-mini"
+            showon="ai_provider:openai"
+        >
+            <option value="gpt-4o">GPT-4o</option>
+            <option value="gpt-4o-mini">GPT-4o Mini</option>
+            <option value="gpt-4-turbo">GPT-4 Turbo</option>
+            <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+        </field>
+
+        <field
+            name="gemini_api_key"
+            type="text"
+            label="COM_PHOCASEO_CONFIG_GEMINI_KEY_LABEL"
+            description="COM_PHOCASEO_CONFIG_GEMINI_KEY_DESC"
+            filter="raw"
+            showon="ai_provider:gemini"
+        />
+
+        <field
+            name="gemini_model"
+            type="list"
+            label="COM_PHOCASEO_CONFIG_GEMINI_MODEL_LABEL"
+            default="gemini-2.0-flash"
+            showon="ai_provider:gemini"
+        >
+            <option value="gemini-3-flash-preview">Gemini 3 Flash (Newest)</option>
+            <option value="gemini-2.5-flash">Gemini 2.5 Flash (Recommended)</option>
+            <option value="gemini-2.0-flash">Gemini 2.0 Flash (Stable)</option>
+
+            <option value="gemini-2.5-flash-lite">Gemini 2.5 Flash-Lite</option>
+
+            <option value="gemini-3-pro-preview">Gemini 3 Pro (Newest)</option>
+            <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
+        </field>
+
+        <field
+            name="claude_api_key"
+            type="text"
+            label="COM_PHOCASEO_CONFIG_CLAUDE_KEY_LABEL"
+            description="COM_PHOCASEO_CONFIG_CLAUDE_KEY_DESC"
+            filter="raw"
+            showon="ai_provider:claude"
+        />
+
+        <field
+            name="claude_model"
+            type="list"
+            label="COM_PHOCASEO_CONFIG_CLAUDE_MODEL_LABEL"
+            default="claude-3-5-sonnet-20240620"
+            showon="ai_provider:claude"
+        >
+            <option value="claude-3-5-sonnet-20240620">Claude 3.5 Sonnet</option>
+            <option value="claude-3-opus-20240229">Claude 3 Opus</option>
+            <option value="claude-3-sonnet-20240229">Claude 3 Sonnet</option>
+            <option value="claude-3-haiku-20240307">Claude 3 Haiku</option>
+        </field>
+    </fieldset>
+
+
+
+
+    <fieldset
+        name="seo_settings"
+        label="COM_PHOCASEO_CONFIG_SEO_SETTINGS_LABEL"
+    >
+
+        <field
+            name="custom_rules_file"
+            type="text"
+            label="COM_PHOCASEO_CONFIG_RULES_FILE_LABEL"
+            description="COM_PHOCASEO_CONFIG_RULES_FILE_DESC"
+            default=""
+        />
+
+    </fieldset>
+
+    <fieldset
+        name="keyword_variations"
+        label="COM_PHOCASEO_CONFIG_KEYWORD_VARIATIONS_LABEL"
+        description="COM_PHOCASEO_CONFIG_KEYWORD_VARIATIONS_DESC"
+    >
+        <field
+            name="enable_keyword_variations"
+            type="radio" layout="joomla.form.field.radio.switcher"
+            label="COM_PHOCASEO_CONFIG_ENABLE_VARIATIONS_LABEL"
+            description="COM_PHOCASEO_CONFIG_ENABLE_VARIATIONS_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+            name="variation_strategy"
+            type="list"
+            label="COM_PHOCASEO_CONFIG_VARIATION_STRATEGY_LABEL"
+            description="COM_PHOCASEO_CONFIG_VARIATION_STRATEGY_DESC"
+            default="suffix"
+            showon="enable_keyword_variations:1"
+        >
+            <option value="suffix">COM_PHOCASEO_STRATEGY_SUFFIX</option>
+            <option value="ai">COM_PHOCASEO_STRATEGY_AI</option>
+            <option value="hybrid">COM_PHOCASEO_STRATEGY_HYBRID</option>
+        </field>
+
+        <field
+            name="variation_language"
+            type="list"
+            label="COM_PHOCASEO_CONFIG_VARIATION_LANGUAGE_LABEL"
+            description="COM_PHOCASEO_CONFIG_VARIATION_LANGUAGE_DESC"
+            default=""
+            showon="enable_keyword_variations:1"
+        >
+            <option value="">COM_PHOCASEO_AUTO</option>
+            <option value="cs">cs</option>
+            <option value="de">de</option>
+            <option value="en">en</option>
+            <option value="es">es</option>
+            <option value="fr">fr</option>
+            <option value="it">it</option>
+            <option value="pl">pl</option>
+            <option value="ru">ru</option>
+            <option value="sk">sk</option>
+        </field>
+
+        <field
+            name="variation_include_in_deep_analysis"
+            type="radio" layout="joomla.form.field.radio.switcher"
+            label="COM_PHOCASEO_CONFIG_VARIATIONS_IN_DEEP_ANALYSIS_LABEL"
+            description="COM_PHOCASEO_CONFIG_VARIATIONS_IN_DEEP_ANALYSIS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+            showon="enable_keyword_variations:1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+            type="note"
+            label="COM_PHOCASEO_CONFIG_VARIATIONS_HELP_TITLE"
+            description="COM_PHOCASEO_CONFIG_VARIATIONS_HELP_TEXT"
+            class="alert alert-info"
+            showon="enable_keyword_variations:1"
+        />
+
+        <field
+            name="custom_language_patterns_dir"
+            type="text"
+            label="COM_PHOCASEO_CONFIG_CUSTOM_PATTERNS_DIR_LABEL"
+            description="COM_PHOCASEO_CONFIG_CUSTOM_PATTERNS_DIR_DESC"
+            default=""
+            hint="media/com_phocaseo/language-patterns"
+        />
+
+    </fieldset>
+
+
+    <fieldset
+        name="links_settings"
+        label="COM_PHOCASEO_CONFIG_LINKS_SETTINGS_LABEL"
+    >
+        <field
+            name="batch_size"
+            type="number"
+            label="COM_PHOCASEO_CONFIG_BATCH_SIZE_LABEL"
+            description="COM_PHOCASEO_CONFIG_BATCH_SIZE_DESC"
+            default="20"
+            min="1"
+            max="100"
+        />
+    </fieldset>
+</config>

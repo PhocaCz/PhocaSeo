@@ -1,0 +1,261 @@
+{
+    "description": "Phoca SEO Professional Rules Definition",
+    "version": "6.0.0",
+    "parameters": {
+        "title": {
+            "label": "COM_PHOCASEO_RULE_TITLE_LABEL",
+            "selector": "jform_title",
+            "min_length": 20,
+            "max_length": 70,
+            "ideal_length": 55,
+            "rules": [
+                {
+                    "id": "title_length",
+                    "label": "COM_PHOCASEO_RULE_TITLE_LENGTH",
+                    "weight": 15,
+                    "check": "length",
+                    "messages": {
+                        "too_short": "COM_PHOCASEO_RULE_MSG_TITLE_TOO_SHORT",
+                        "too_long": "COM_PHOCASEO_RULE_MSG_TITLE_TOO_LONG",
+                        "good": "COM_PHOCASEO_RULE_MSG_TITLE_GOOD"
+                    }
+                },
+                {
+                    "id": "title_keyword",
+                    "label": "COM_PHOCASEO_RULE_TITLE_KEYWORD",
+                    "weight": 25,
+                    "check": "contains_keyword",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_TITLE_KW_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_TITLE_KW_GOOD"
+                    }
+                },
+                {
+                    "id": "title_keyword_start",
+                    "label": "COM_PHOCASEO_RULE_TITLE_KEYWORD_START",
+                    "weight": 5,
+                    "check": "keyword_at_start",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_TITLE_KW_START_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_TITLE_KW_START_GOOD"
+                    }
+                }
+            ]
+        },
+        "description": {
+            "label": "COM_PHOCASEO_RULE_DESCRIPTION_LABEL",
+            "selector": "jform_metadesc",
+            "min_length": 100,
+            "max_length": 180,
+            "ideal_length": 155,
+            "rules": [
+                {
+                    "id": "desc_length",
+                    "label": "COM_PHOCASEO_RULE_DESC_LENGTH",
+                    "weight": 15,
+                    "check": "length",
+                    "messages": {
+                        "too_short": "COM_PHOCASEO_RULE_MSG_DESC_TOO_SHORT",
+                        "too_long": "COM_PHOCASEO_RULE_MSG_DESC_TOO_LONG",
+                        "good": "COM_PHOCASEO_RULE_MSG_DESC_GOOD"
+                    }
+                },
+                {
+                    "id": "desc_keyword",
+                    "label": "COM_PHOCASEO_RULE_DESC_KEYWORD",
+                    "weight": 15,
+                    "check": "contains_keyword",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_DESC_KW_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_DESC_KW_GOOD"
+                    }
+                }
+            ]
+        },
+        "keywords": {
+            "label": "COM_PHOCASEO_RULE_KEYWORDS_LABEL",
+            "selector": "jform_metakey",
+            "max_length": 500,
+            "max_count": 20,
+            "rules": [
+                {
+                    "id": "keywords_length",
+                    "label": "COM_PHOCASEO_RULE_KEYWORDS_LENGTH",
+                    "weight": 5,
+                    "check": "length",
+                    "messages": {
+                        "too_long": "COM_PHOCASEO_RULE_MSG_KEYS_TOO_LONG",
+                        "good": "COM_PHOCASEO_RULE_MSG_KEYS_GOOD"
+                    }
+                },
+                {
+                    "id": "keywords_count",
+                    "label": "COM_PHOCASEO_RULE_KEYWORDS_COUNT",
+                    "weight": 5,
+                    "check": "count",
+                    "messages": {
+                        "too_many": "COM_PHOCASEO_RULE_MSG_KEYS_COUNT_MANY",
+                        "good": "COM_PHOCASEO_RULE_MSG_KEYS_COUNT_GOOD"
+                    }
+                }
+            ]
+        },
+        "alias": {
+            "label": "COM_PHOCASEO_RULE_ALIAS_LABEL",
+            "selector": "jform_alias",
+            "rules": [
+                {
+                    "id": "slug_keyword",
+                    "label": "COM_PHOCASEO_RULE_SLUG_KEYWORD",
+                    "weight": 10,
+                    "check": "contains_keyword",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_SLUG_KW_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_SLUG_KW_GOOD"
+                    }
+                }
+            ]
+        },
+        "content": {
+            "label": "COM_PHOCASEO_RULE_CONTENT_LABEL",
+            "selector": "jform_articletext",
+            "rules": [
+                {
+                    "id": "keyword_density",
+                    "label": "COM_PHOCASEO_RULE_KEYWORD_DENSITY",
+                    "weight": 10,
+                    "min_density": 0.4,
+                    "max_density": 3.5,
+                    "messages": {
+                        "too_low": "COM_PHOCASEO_RULE_MSG_DENSITY_LOW",
+                        "too_high": "COM_PHOCASEO_RULE_MSG_DENSITY_HIGH",
+                        "good": "COM_PHOCASEO_RULE_MSG_DENSITY_GOOD"
+                    }
+                },
+                {
+                    "id": "subheadings",
+                    "label": "COM_PHOCASEO_RULE_SUBHEADINGS",
+                    "weight": 5,
+                    "check": "has_subheadings",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_SUBHEADINGS_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_SUBHEADINGS_GOOD"
+                    }
+                },
+                {
+                    "id": "h_placement",
+                    "label": "COM_PHOCASEO_RULE_H_PLACEMENT",
+                    "weight": 5,
+                    "check": "keyword_in_headers",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_H_KW_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_H_KW_GOOD"
+                    }
+                },
+                {
+                    "id": "img_alts",
+                    "label": "COM_PHOCASEO_RULE_IMG_ALTS",
+                    "weight": 5,
+                    "check": "has_alt_tags",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_ALTS_MISSING",
+                        "no_images": "COM_PHOCASEO_RULE_MSG_ALTS_NONE",
+                        "good": "COM_PHOCASEO_RULE_MSG_ALTS_GOOD"
+                    }
+                },
+                {
+                    "id": "intro_keyword",
+                    "label": "COM_PHOCASEO_RULE_INTRO_KEYWORD",
+                    "weight": 10,
+                    "check": "keyword_in_intro",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_INTRO_KW_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_INTRO_KW_GOOD"
+                    }
+                },
+                {
+                    "id": "outbound_links",
+                    "label": "COM_PHOCASEO_RULE_OUTBOUND_LINKS",
+                    "weight": 5,
+                    "check": "has_outbound_links",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_OUTBOUND_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_OUTBOUND_GOOD"
+                    }
+                },
+                {
+                    "id": "internal_links",
+                    "label": "COM_PHOCASEO_RULE_INTERNAL_LINKS",
+                    "weight": 5,
+                    "check": "has_internal_links",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_INTERNAL_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_INTERNAL_GOOD"
+                    }
+                },
+                {
+                    "id": "readability",
+                    "label": "COM_PHOCASEO_RULE_READABILITY",
+                    "weight": 5,
+                    "check": "flesch_score",
+                    "min_score": 50,
+                    "messages": {
+                        "too_hard": "COM_PHOCASEO_RULE_MSG_READABILITY_HARD",
+                        "good": "COM_PHOCASEO_RULE_MSG_READABILITY_GOOD"
+                    }
+                },
+                {
+                    "id": "transition_words",
+                    "label": "COM_PHOCASEO_RULE_TRANSITION_WORDS",
+                    "weight": 5,
+                    "check": "transition_words",
+                    "min_ratio": 0.15,
+                    "messages": {
+                        "too_low": "COM_PHOCASEO_RULE_MSG_TRANSITION_LOW",
+                        "good": "COM_PHOCASEO_RULE_MSG_TRANSITION_GOOD"
+                    }
+                },
+                {
+                    "id": "passive_voice",
+                    "label": "COM_PHOCASEO_RULE_PASSIVE_VOICE",
+                    "weight": 5,
+                    "check": "passive_voice",
+                    "max_ratio": 0.2,
+                    "messages": {
+                        "too_much": "COM_PHOCASEO_RULE_MSG_PASSIVE_MUCH",
+                        "good": "COM_PHOCASEO_RULE_MSG_PASSIVE_GOOD"
+                    }
+                }
+            ]
+        },
+        "schema": {
+            "label": "COM_PHOCASEO_RULE_SCHEMA_LABEL",
+            "rules": [
+                {
+                    "id": "schema_type",
+                    "label": "COM_PHOCASEO_RULE_SCHEMA_TYPE_LABEL",
+                    "weight": 10,
+                    "check": "schema_presence",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_SCHEMA_TYPE_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_SCHEMA_TYPE_GOOD"
+                    }
+                },
+                {
+                    "id": "schema_mandatory",
+                    "label": "COM_PHOCASEO_RULE_SCHEMA_MANDATORY_LABEL",
+                    "weight": 15,
+                    "check": "schema_validation",
+                    "messages": {
+                        "missing": "COM_PHOCASEO_RULE_MSG_SCHEMA_MANDATORY_MISSING",
+                        "good": "COM_PHOCASEO_RULE_MSG_SCHEMA_MANDATORY_GOOD"
+                    }
+                }
+            ],
+            "mandatory_fields": {
+                "Article": ["headline", "image", "author", "datePublished"],
+                "Recipe": ["name", "image", "author", "recipeInstructions", "recipeIngredient"]
+            }
+        }
+    }
+}

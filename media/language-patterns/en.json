@@ -1,0 +1,57 @@
+{
+  "language": "en",
+  "language_name": "English",
+  "description": "Custom English language suffix patterns for keyword variations",
+  "version": "1.1.0",
+  "author": "Jan Pavelka",
+
+  "suffix_groups": [
+    {
+      "description": "Verbs/Nouns with silent -e- (e.g. optimize -> optimizing, optimization)",
+      "suffixes": [
+        "ize", "izing", "ized", "izes", "ization", "izations", "izer", "izers"
+      ]
+    },
+    {
+      "description": "Common Action/Process suffixes (e.g. create -> creating)",
+      "suffixes": [
+        "e", "ing", "ed", "es", "ation", "ations", "er", "or"
+      ]
+    },
+    {
+      "description": "Standard Noun Plurals and Possessives",
+      "suffixes": [
+        "ies", "s", "es", "'s", "s'"
+      ]
+    },
+    {
+      "description": "Adjective Comparison and Adverbs",
+      "suffixes": [
+        "ly", "er", "est", "ness"
+      ]
+    },
+    {
+      "description": "Common Adjective Suffixes",
+      "suffixes": [
+        "able", "ible", "al", "ful", "less", "ish"
+      ]
+    }
+  ],
+
+  "transition_words":["also","besides","consequently","finally","furthermore","hence","however","indeed","likewise","moreover","namely","next","nonetheless","notwithstanding","now","otherwise","similarly","still","then","therefore","thus","truly","ultimately","undoubtedly","accordingly","as a result","for this reason","since","so","in addition","additionally","nevertheless","on the other hand"],
+  "passive_voice":["am","is","are","was","were","be","been","being"],
+
+  "notes": [
+    "English relies on longest suffix match to handle silent -e- changes",
+    "Group 1 handles specific SEO terms like optimize/organize",
+    "Minimum stem length of 3 characters prevents over-stemming",
+    "Longest match (e.g., 'ization' vs 'ion') must be prioritized"
+  ],
+
+  "examples": {
+    "optimize": ["optimize", "optimizing", "optimized", "optimization", "optimizer"],
+    "strategy": ["strategy", "strategies"],
+    "link": ["link", "links", "linked", "linking"],
+    "develop": ["develop", "developed", "developing", "development", "developer"]
+  }
+}

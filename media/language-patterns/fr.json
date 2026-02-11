@@ -1,0 +1,58 @@
+{
+  "language": "fr",
+  "language_name": "French",
+  "description": "Custom French language suffix patterns for keyword variations",
+  "version": "1.0.0",
+  "author": "Jan Pavelka",
+
+  "suffix_groups": [
+    {
+      "description": "Noun and Adjective Plurals",
+      "suffixes": [
+        "s", "x"
+      ]
+    },
+    {
+      "description": "Gender Agreement (Feminine)",
+      "suffixes": [
+        "e", "es", "ne", "ve", "se"
+      ]
+    },
+    {
+      "description": "Common Verb Conjugations (ER/IR/RE)",
+      "suffixes": [
+        "e", "es", "ons", "ez", "ent", "ant", "é", "és", "ée", "ées",
+        "ira", "as", "a", "ait", "aient"
+      ]
+    },
+    {
+      "description": "Adverb Formation",
+      "suffixes": [
+        "ment"
+      ]
+    },
+    {
+      "description": "Common Abstract/Action Nouns",
+      "suffixes": [
+        "ion", "tion", "ation", "ité", "isme"
+      ]
+    }
+  ],
+
+  "transition_words":["aussi","de plus","par conséquent","finalement","en outre","ainsi","cependant","en effet","de même","de plus","à savoir","ensuite","néanmoins","nonobstant","maintenant","sinon","de même","encore","puis","donc","ainsi","vraiment","en fin de compte","sans aucun doute","en conséquence","par suite","pour cette raison","puisque","donc","en addition","de plus","néanmoins","d'autre part"],
+    "passive_voice":["suis","est","sont","était","étaient","être","été","étant"],
+
+  "notes": [
+    "French plurals usually use 's', but words ending in -au or -eu use 'x' (e.g., bateau -> bateaux)",
+    "The 'silent e' is the most common feminine marker",
+    "Elisions (l', d', qu') should be stripped before analysis so 'l'article' matches 'article'",
+    "Accents (é, è, ê, à, ç) are critical for spelling but should be normalized for SEO matching"
+  ],
+
+  "examples": {
+    "offre": ["offre", "offres", "offert", "offerte", "offerts", "offertes"],
+    "recette": ["recette", "recettes"],
+    "rapide": ["rapide", "rapides", "rapidement"],
+    "cuisiner": ["cuisiner", "cuisine", "cuisiné", "cuisinant", "cuisines"]
+  }
+}

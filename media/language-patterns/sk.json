@@ -1,0 +1,86 @@
+{
+  "language": "sk",
+  "language_name": "Slovak",
+  "description": "Custom Slovak language suffix patterns for keyword variations",
+  "version": "1.0.0",
+  "author": "Jan Pavelka",
+
+  "suffix_groups": [
+    {
+      "description": "Feminine nouns ending in -a (vzor žena/ulica)",
+      "suffixes": [
+        "a", "y", "i", "e", "u", "ou", "o",
+        "ách", "ami", "ám", "iach"
+      ]
+    },
+    {
+      "description": "Neuter nouns ending in -o/-e (vzor mesto/srdce)",
+      "suffixes": [
+        "o", "a", "u", "om", "e", "i",
+        "och", "iam", "iach", "ami"
+      ]
+    },
+    {
+      "description": "Masculine nouns (vzor chlap/dub/stroj)",
+      "suffixes": [
+        "", "a", "u", "om", "ovi", "e", "i",
+        "ov", "och", "ami", "mi"
+      ]
+    },
+    {
+      "description": "Adjectives (hard and soft declension)",
+      "suffixes": [
+        "ý", "á", "é", "ího", "ému", "om", "ou",
+        "í", "ia", "ie", "ích", "ím", "ími", "ej"
+      ]
+    },
+    {
+      "description": "Common diminutives (Slovak specifics)",
+      "suffixes": [
+        "ka", "ky", "ku", "ke", "kou", "ička", "ičky", "ičku", "ček"
+      ]
+    },
+    {
+      "description": "Verbal nouns and abstract suffixes",
+      "suffixes": [
+        "ie", "ia", "ím", "í", "osť", "osti", "osťou", "osťami"
+      ]
+    },
+    {
+      "description": "Comparative and superlative",
+      "suffixes": [
+        "ší", "šia", "šie", "šieho", "šiemu",
+        "ejší", "ejšia", "ejšie", "ejšieho"
+      ]
+    },
+    {
+      "description": "Nouns with moving -o- or -e- (e.g. ponuka -> ponúk, včielka -> včielok)",
+      "suffixes": ["ka", "ky", "ke", "ku", "kou", "ok", "iec", "kách", "kami"]
+    },
+    {
+      "description": "Standard feminine nouns (-a)",
+      "suffixes": ["a", "y", "e", "u", "ou", "ách", "ami", "ám"]
+    },
+    {
+      "description": "Standard masculine/neuter endings",
+      "suffixes": ["o", "u", "om", "e", "och", "y", "ov", "i", "a"]
+    }
+  ],
+
+   "transition_words":["tiež","okrem toho","v dôsledku toho","nakoniec","ďalej","preto","avšak","skutočne","podobne","navyše","menovite","ďalej","napriek tomu","nehľadiac na to","teraz","inak","podobne","stále","potom","preto","teda","naozaj","napokon","nepochybne","primerane","v dôsledku","z tohto dôvodu","keďže","takže","dodatočne","navyše","napriek tomu","na druhej strane"],
+    "passive_voice":["som","je","sú","bol","boli","byť","bol","súc"],
+
+  "notes": [
+    "Slovak uses 'dĺžne' and 'mäkčene' (á, é, í, ó, ú, r, l, č, š, ž, ť, ď, ň, ľ)",
+    "Rhythmic rule: long vowels usually don't follow long vowels (polievka vs. polievok)",
+    "Diphthongs (ia, ie, iu, ô) can change to single vowels in some forms",
+    "Minimum stem length of 3 characters is recommended"
+  ],
+
+  "examples": {
+    "ponuka": ["ponuka", "ponuky", "ponuku", "ponukou", "ponúk", "ponuke", "ponukám", "ponukách", "ponukami"],
+    "recept": ["recept", "receptu", "receptom", "recepty", "receptoch", "receptov"],
+    "krásny": ["krásny", "krásna", "krásne", "krásnej", "krásnom", "krásnych"],
+    "rýchly": ["rýchly", "rýchlo", "rýchlejšie", "rýchlejšia"]
+  }
+}

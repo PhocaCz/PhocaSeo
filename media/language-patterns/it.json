@@ -1,0 +1,58 @@
+{
+  "language": "it",
+  "language_name": "Italian",
+  "description": "Custom Italian language suffix patterns for keyword variations",
+  "version": "1.0.0",
+  "author": "Jan Pavelka",
+
+  "suffix_groups": [
+    {
+      "description": "Noun and Adjective Plurals (Vowel change)",
+      "suffixes": [
+        "o", "a", "i", "e"
+      ]
+    },
+    {
+      "description": "Common Verb Conjugations (ARE/ERE/IRE)",
+      "suffixes": [
+        "o", "i", "a", "iamo", "ate", "ano", "ete", "ite",
+        "ato", "uto", "ito", "ando", "endo", "erò", "erà"
+      ]
+    },
+    {
+      "description": "Diminutives and Augmentatives",
+      "suffixes": [
+        "ino", "ina", "ini", "ine", "one", "ona", "etto", "etta"
+      ]
+    },
+    {
+      "description": "Adverb Formation",
+      "suffixes": [
+        "mente"
+      ]
+    },
+    {
+      "description": "Abstract and Professional Nouns",
+      "suffixes": [
+        "iore", "ista", "ismo", "ità", "zione", "anza", "enza"
+      ]
+    }
+  ],
+
+  "transition_words":["anche","inoltre","di conseguenza","infine","inoltre","quindi","tuttavia","infatti","allo stesso modo","inoltre","vale a dire","poi","ciononostante","nonostante ciò","ora","altrimenti","similmente","ancora","poi","perciò","dunque","veramente","in definitiva","indubbiamente","di conseguenza","come risultato","per questa ragione","poiché","così","in aggiunta","inoltre","ciononostante","d'altra parte"],
+    "passive_voice":["sono","è","sono","era","erano","essere","stato","essendo"],
+
+  "notes": [
+    "Italian plurals change the last vowel: o -> i (masc), a -> e (fem)",
+    "Like French, elision is common (l'amico, sull'isola). Strip l', d', un', quest' before matching",
+    "Gender agreement is vital: 'ricetta veloce' vs 'piatto veloce'",
+    "Minimum stem length of 4 characters is recommended"
+  ],
+
+  "examples": {
+    "offerta": ["offerta", "offerte", "offertona", "offertissima"],
+    "ricetta": ["ricetta", "ricette"],
+    "veloce": ["veloce", "veloci", "velocemente"],
+    "cucinare": ["cucinare", "cucino", "cucina", "cucinato", "cucinando"]
+  }
+}

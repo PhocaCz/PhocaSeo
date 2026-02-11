@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="JSEARCH_FILTER_LABEL"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string"
+		/>
+		<field
+			name="page_type"
+			type="list"
+			label="COM_PHOCASEO_FILTER_PAGE_TYPE"
+			description="COM_PHOCASEO_FILTER_PAGE_TYPE_DESC"
+			default="all"
+			onchange="this.form.submit();"
+		>
+			<option value="all">COM_PHOCASEO_ALL_PAGES</option>
+			<option value="top">COM_PHOCASEO_TOP_LINKED_PAGES</option>
+			<option value="orphans">COM_PHOCASEO_ORPHAN_PAGES</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			class="js-select-submit-on-change"
+			default="a.id DESC"
+			validate="options"
+		>
+			<option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+			<option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+			<option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+			<option value="a.created ASC">COM_PHOCASEO_CREATED_ASC</option>
+			<option value="a.created DESC">COM_PHOCASEO_CREATED_DESC</option>
+			<option value="a.hits ASC">JGLOBAL_HITS_ASC</option>
+			<option value="a.hits DESC">JGLOBAL_HITS_DESC</option>
+			<option value="link_count ASC">COM_PHOCASEO_LINK_COUNT_ASC</option>
+			<option value="link_count DESC">COM_PHOCASEO_LINK_COUNT_DESC</option>
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			label="JGLOBAL_LIST_LIMIT"
+			description="JGLOBAL_LIST_LIMIT_DESC"
+			class="js-select-submit-on-change"
+			default="20"
+		/>
+	</fields>
+</form>

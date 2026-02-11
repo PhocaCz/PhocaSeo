@@ -1,0 +1,68 @@
+{
+  "language": "pl",
+  "language_name": "Polish",
+  "description": "Custom Polish language suffix patterns for keyword variations",
+  "version": "1.0.0",
+  "author": "Jan Pavelka",
+
+  "suffix_groups": [
+    {
+      "description": "Nouns - Masculine/Neuter (Declension types)",
+      "suffixes": [
+        "a", "u", "em", "ie", "owi", "y", "i", "ów", "om", "ami", "ach"
+      ]
+    },
+    {
+      "description": "Nouns - Feminine (Declension types -a)",
+      "suffixes": [
+        "a", "y", "i", "ę", "ą", "o", "e", "ach", "ami", "om"
+      ]
+    },
+    {
+      "description": "Adjectives (Gender and Case agreement)",
+      "suffixes": [
+        "y", "a", "e", "ego", "emu", "ym", "ą", "ej", "i", "ych", "ymi"
+      ]
+    },
+    {
+      "description": "Verb Conjugations (Common endings)",
+      "suffixes": [
+        "ć", "m", "sz", "my", "cie", "ą", "ę", "ał", "ała", "alo", "ali", "ały", "ano", "ono"
+      ]
+    },
+    {
+      "description": "Diminutives and Common Suffixes",
+      "suffixes": [
+        "ek", "ka", "ko", "cy", "ce", "ość", "ości", "ostką", "enie", "anie", "cie"
+      ]
+    },
+    {
+      "description": "Comparative and Superlative",
+      "suffixes": [
+        "szy", "sza", "sze", "szym", "szych", "ej", "ej szy"
+      ]
+    },
+    {
+      "description": "Nouns with stem changes (e.g. matka -> matek)",
+      "suffixes": ["ka", "ki", "ce", "ką", "kę", "ek", "kach", "kami"]
+    },
+  ],
+
+  "transition_words":["także","poza tym","w konsekwencji","wreszcie","ponadto","stąd","jednak","istotnie","podobnie","co więcej","mianowicie","następnie","niemniej jednak","pomimo to","teraz","w przeciwnym razie","podobnie","nadal","potem","dlatego","tym samym","naprawdę","ostatecznie","niewątpliwie","odpowiednio","w rezultacie","z tego powodu","ponieważ","więc","dodatkowo","dodatkowo","niemniej jednak","z drugiej strony"],
+    "passive_voice":["jestem","jest","są","był","byli","być","był","będący"],
+
+  "notes": [
+    "Polish uses unique characters: ą, ć, ę, ł, ń, ó, ś, ź, ż",
+    "Nasal vowels (ą, ę) often alternate: 'ząb' (tooth) -> 'zęby' (teeth)",
+    "Consonant shifts (alternations) are frequent: 'k' -> 'c', 'g' -> 'dz' (e.g., rzeka -> rzece)",
+    "The prefix 'naj-' is used for superlatives (najszybszy)",
+    "Minimum stem length of 3 characters is recommended"
+  ],
+
+  "examples": {
+    "oferta": ["oferta", "oferty", "ofertę", "ofertą", "ofercie", "ofert", "ofertach", "ofertami", "ofertom"],
+    "przepis": ["przepis", "przepisu", "przepisem", "przepisy", "przepisów", "przepisami"],
+    "szybki": ["szybki", "szybka", "szybkie", "szybkiego", "szybkim", "szybko", "szybciej"],
+    "gotować": ["gotować", "gotuję", "gotujesz", "gotuje", "gotujemy", "gotowali", "gotowano"]
+  }
+}

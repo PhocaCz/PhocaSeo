@@ -1,0 +1,57 @@
+{
+  "language": "de",
+  "language_name": "German",
+  "description": "Custom German language suffix patterns for keyword variations",
+  "version": "1.0.0",
+  "author": "Jan Pavelka",
+
+  "suffix_groups": [
+    {
+      "description": "Noun Plurals and Case endings (Genitive/Dative)",
+      "suffixes": [
+        "e", "en", "er", "ern", "es", "s", "n"
+      ]
+    },
+    {
+      "description": "Adjective Declension (Weak/Strong/Mixed)",
+      "suffixes": [
+        "e", "em", "en", "er", "es"
+      ]
+    },
+    {
+      "description": "Verb Conjugations (Present/Past)",
+      "suffixes": [
+        "en", "et", "est", "te", "ten", "tet", "st", "t"
+      ]
+    },
+    {
+      "description": "Comparative and Superlative",
+      "suffixes": [
+        "er", "ere", "eren", "est", "este", "esten"
+      ]
+    },
+    {
+      "description": "Common Noun Formations (Feminine/Abstract)",
+      "suffixes": [
+        "in", "innen", "heit", "keit", "ung", "schaft"
+      ]
+    }
+  ],
+
+  "transition_words":["auch","außerdem","folglich","schließlich","ferner","daher","jedoch","in der Tat","ebenso","außerdem","nämlich","als nächstes","dennoch","nichtsdestoweniger","jetzt","ansonsten","ähnlich","noch","dann","deshalb","somit","wahrlich","letztendlich","zweifellos","entsprechend","als Ergebnis","aus diesem Grund","da","also","zusätzlich","außerdem","dennoch","andererseits"],
+    "passive_voice":["bin","ist","sind","war","waren","sein","gewesen","seiend"],
+
+  "notes": [
+    "German uses 'Umlaut' changes (a→ä, o→ö, u→ü) in plurals which suffixes alone won't catch",
+    "Compound words (Komposita) are very common; 'Suppenrezept' contains 'Suppe'",
+    "Capitalization is mandatory for nouns in German, but SEO scripts should usually be case-insensitive",
+    "Minimum stem length of 4 characters is recommended to avoid false positives with articles/prepositions"
+  ],
+
+  "examples": {
+    "Angebot": ["Angebot", "Angebote", "Angebots", "Angeboten"],
+    "Rezept": ["Rezept", "Rezepte", "Rezeptes", "Rezepten", "Rezepts"],
+    "schnell": ["schnell", "schnelle", "schneller", "schnellere", "schnellsten"],
+    "optimieren": ["optimieren", "optimiert", "optimierte", "optimierung"]
+  }
+}

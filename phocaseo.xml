@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" version="6.0">
+	<name>com_phocaseo</name>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<creationDate>11/02/2026</creationDate>
+	<authorEmail></authorEmail>
+	<authorUrl>https://www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>6.0.0Alpha14</version>
+	<description>COM_PHOCASEO_XML_DESCRIPTION</description>
+	<namespace path="src">Phoca\Component\PhocaSeo</namespace>
+	<scriptfile>script.php</scriptfile>
+	<projectName>PhocaSeo</projectName>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install/sql/mysql/install.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">install/sql/mysql/uninstall.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">update/sql/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<folder>src</folder>
+		<filename>index.html</filename>
+	</files>
+
+	<media destination="com_phocaseo" folder="media">
+		<folder>language-patterns</folder>
+		<folder>images</folder>
+		<folder>rules</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<filename>joomla.asset.json</filename>
+	</media>
+
+	<languages folder="admin/language">
+		<language tag="en-GB" client="site">en-GB/en-GB.com_phocaseo.ini</language>
+		<language tag="en-GB" client="site">en-GB/en-GB.com_phocaseo.sys.ini</language>
+	</languages>
+
+	<administration>
+
+		<menu img="class:cp" alt="COM_PHOCASEO" link="option=com_phocaseo">COM_PHOCASEO</menu>
+
+			<submenu>
+				<menu img="class:cp" alt="COM_PHOCASEO_DASHBOARD" view="dashboard" link="option=com_phocaseo">COM_PHOCASEO_DASHBOARD</menu>
+				<menu img="class::metadata" alt="COM_PHOCASEO_METADATA_MANAGER" view="items" link="option=com_phocaseo&amp;view=items">COM_PHOCASEO_METADATA_MANAGER</menu>
+				<menu img="class::link" alt="COM_PHOCASEO_LINK_MANAGER" view="items" link="option=com_phocaseo&amp;view=links">COM_PHOCASEO_LINK_MANAGER</menu>
+				<menu img="class::file-2" alt="COM_PHOCASEO_PAGES_MANAGER" view="pages" link="option=com_phocaseo&amp;view=pages">COM_PHOCASEO_PAGES_MANAGER</menu>
+				<menu img="class::info" alt="COM_PHOCASEO_INFO" view="info" link="option=com_phocaseo&amp;view=info">COM_PHOCASEO_INFO</menu>
+			</submenu>
+
+		<files folder="admin">
+			<folder>tmpl</folder>
+			<folder>src</folder>
+			<folder>update</folder>
+			<folder>help</folder>
+			<folder>layouts</folder>
+			<folder>forms</folder>
+			<folder>install</folder>
+			<folder>services</folder>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+		</files>
+
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_phocaseo.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_phocaseo.sys.ini</language>
+		</languages>
+	</administration>
+	
+	
+
+	<updateservers>
+		<server type="extension" name="COM_PHOCASEO" priority="1"><![CDATA[https://raw.githubusercontent.com/PhocaCz/PhocaSeo/master/manifest.xml]]></server>
+	</updateservers>
+</extension>

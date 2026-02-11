@@ -1,0 +1,61 @@
+{
+	"author": "Jan Pavelka (www.phoca.cz)",
+	"authorUrl": "https://www.phoca.cz",
+	"copyright": "Jan Pavelka",
+	"license": "GNU/GPL",
+	"projectName": "PhocaSeo",
+	"extensionName": "Phoca Seo",
+	"projectInitials" : "PS",
+	"description": "Phoca SEO is a powerful, enterprise-grade component designed to transform Joomla websites into high-performing marketing assets. It provides a centralized ecosystem for managing all critical aspects of Search Engine Optimization and digital visibility.",
+	"projectUrl": "https://www.phoca.cz/phocaseo",
+	"projectDocumentationUrl": "https://www.phoca.cz/documentation",
+	"projectMainComponent": "Phoca Seo",
+	"projectMainComponentInfoUrl": "",
+	"nameSpace": "Phoca\\Component\\PhocaSeo",
+	"projectDemo" : {
+		"Joomla! 3 Demo - Photos": "https://www.phoca.cz"
+	},
+	"projectColor": "#FF7F50",
+	"menu": {
+		"main":{
+			"0" : {
+				"image": "class:cp",
+				"view": "",
+				"link": "option=com_phocaseo",
+				"title": "COM_PHOCASEO"
+			}
+		},
+		"submenu": {
+			"0" : {
+				"image": "class:cp",
+				"view": "dashboard",
+				"link": "option=com_phocaseo",
+				"title": "COM_PHOCASEO_DASHBOARD"
+			},
+			"1": {
+				"image": "class::metadata",
+				"view": "items",
+				"link": "option=com_phocaseo&amp;view=items",
+				"title": "COM_PHOCASEO_METADATA_MANAGER"
+			},
+			"2": {
+				"image": "class::link",
+				"view": "items",
+				"link": "option=com_phocaseo&amp;view=links",
+				"title": "COM_PHOCASEO_LINK_MANAGER"
+			},
+			"3": {
+				"image": "class::file-2",
+				"view": "pages",
+				"link": "option=com_phocaseo&amp;view=pages",
+				"title": "COM_PHOCASEO_PAGES_MANAGER"
+			},
+			"4": {
+				"image": "class::info",
+				"view": "info",
+				"link": "option=com_phocaseo&amp;view=info",
+				"title": "COM_PHOCASEO_INFO"
+			}
+		}
+	}
+}
