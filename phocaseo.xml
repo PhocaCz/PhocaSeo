@@ -2,12 +2,12 @@
 <extension type="component" method="upgrade" version="6.0">
 	<name>com_phocaseo</name>
 	<author>Jan Pavelka (www.phoca.cz)</author>
-	<creationDate>11/02/2026</creationDate>
+	<creationDate>25/05/2026</creationDate>
 	<authorEmail></authorEmail>
 	<authorUrl>https://www.phoca.cz</authorUrl>
 	<copyright>Jan Pavelka</copyright>
 	<license>GNU/GPL</license>
-	<version>6.0.0Alpha14</version>
+	<version>6.1.0</version>
 	<description>COM_PHOCASEO_XML_DESCRIPTION</description>
 	<namespace path="src">Phoca\Component\PhocaSeo</namespace>
 	<scriptfile>script.php</scriptfile>
@@ -38,10 +38,10 @@
 
 	<media destination="com_phocaseo" folder="media">
 		<folder>language-patterns</folder>
-		<folder>images</folder>
-		<folder>rules</folder>
 		<folder>css</folder>
+		<folder>rules</folder>
 		<folder>js</folder>
+		<folder>images</folder>
 		<filename>joomla.asset.json</filename>
 	</media>
 
@@ -63,13 +63,13 @@
 			</submenu>
 
 		<files folder="admin">
+			<folder>install</folder>
+			<folder>update</folder>
+			<folder>forms</folder>
 			<folder>tmpl</folder>
 			<folder>src</folder>
-			<folder>update</folder>
 			<folder>help</folder>
 			<folder>layouts</folder>
-			<folder>forms</folder>
-			<folder>install</folder>
 			<folder>services</folder>
 			<filename>config.xml</filename>
 			<filename>access.xml</filename>
